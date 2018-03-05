@@ -34,7 +34,6 @@ public class NotFullyPaidState implements State {
 	public void start() {
 		if(washingMachine.getNumQuarters() == 4) {
 			washingMachine.setState(washingMachine.getHasPaidState());
-			washingMachine.setNumQuarters(0);
 		}else
 			System.out.println("Cannot start machine, you haven't fully paid for the wash yet.");
 	}

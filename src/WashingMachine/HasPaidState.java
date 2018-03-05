@@ -19,8 +19,14 @@ public class HasPaidState implements State{
 		washingMachine.setNumQuarters(0);
 	}
 	public void start() {
-		System.out.println("Starting the washing machine!");
-		washingMachine.setState(washingMachine.getInUseState());
+		if(washingMachine.getNumQuarters() == 4) {
+			System.out.println("Starting the washing machine!");
+			washingMachine.setState(washingMachine.getInUseState());
+			washingMachine.setNumQuarters(0);
+		}else {
+			System.out.println("Error you have not paid");
+			washingMachine.setState(washingMachine.getNotFullyPaidState());
+		}
 	}
 	public void cancel() {
 		System.out.println("Canceling and returning your payment.");
