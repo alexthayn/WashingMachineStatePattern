@@ -8,10 +8,10 @@ public class WashingMachine {
 	State state;
 	
 	//This variable stores the number of quarters inserted into the machine
-	int countQuarters;
+	private int countQuarters;
 	
 	//This variable stores the machine number
-	int machineNum;
+	private int machineNum;
 
 	//Washing machine constructor
 	public WashingMachine(int num) {
